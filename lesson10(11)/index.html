@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="functions.js" defer></script>
+    <script src="script1.js" async></script>
+  </head>
+  <body class="container">
+    <div id="outer">
+      <div data-my-attribute="my" class="red" data-id="1" data-testid="test">
+        2k
+      </div>
+      <div data-my-attribute="my" class="red" data-id="2" data-testid="test">
+        30k
+      </div>
+    </div>
+
+    <script>
+      let elems = document.querySelectorAll('[data-id]');
+      let accum = 0;
+      for (let i = 0; i < elems.length; i++) {
+        accum += getNumber(elems[i].textContent);
+      }
+      console.log(accum);
+      function getNumber(str) {
+        str = str.trim();
+        if (str[str.length - 1] === "k") {
+          return parseInt(str) * 1000;
+        } else {
+          return +str;
+        }
+      }
+    </script>
+  </body>
+</html>
