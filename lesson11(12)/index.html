@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="functions.js" defer></script>
+    <script src="script1.js" async></script>
+  </head>
+  <body class="container">
+    <form id="form">
+      <input type="text" id="textInput" />
+      <button id="btnHello">
+        Say hello
+      </button>
+    </form>
+    <script>
+      btnHello.addEventListener('click', onClickHandler);
+      function onClickHandler(e) {
+        e.preventDefault();
+        const inputEl = document.getElementById('textInput');
+        const el = document.createElement('h1');
+        el.onclick = () => alert("Hello world!");
+        el.textContent = inputEl.value;
+        document.getElementById('form').append(el);
+      }
+      document.addEventListener('DOMContentLoaded', onDomLoaded);
+      function onDomLoaded() {
+        console.log("DOM LOADED")
+      }
+    </script>
+  </body>
+</html>
