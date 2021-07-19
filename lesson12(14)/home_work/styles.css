@@ -14,3 +14,17 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+
+.buttons-container {
+  padding-top: 10px;
+  /* width: 50%; */
+}
+
+input {
+  max-width: 200px;
+}
+
+input~button {
+  margin-left: 5px;
+}
