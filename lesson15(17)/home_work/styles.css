@@ -1,0 +1,30 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+.buttons-container {
+  padding-top: 10px;
+  /* width: 50%; */
+}
+
+input {
+  max-width: 200px;
+}
+
+input~button {
+  margin-left: 5px;
+}
