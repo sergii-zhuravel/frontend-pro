@@ -1,0 +1,17 @@
+POST  https://jsonplaceholder.typicode.com/users
+content-type: application/json; charset=UTF-8
+
+{
+    "name": "foo",
+    "secondName": "bar"
+}
+
+
+const userData = {
+    firstName: "",
+    secondName:"",
+    password: "sdfsdfdf"
+}
+createUser(userData) {
+    httpPost("https://jsonplaceholder.typicode.com/users", userData)
+}
