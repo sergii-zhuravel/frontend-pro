@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheather app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="api">
+      <div class="container">
+        🌞 Для работы нужен OpenWeather API ключ.
+        <a target="_blank" href="https://home.openweathermap.org/users/sign_up"
+          >Создать свой АПИ ключ можно тут бесплатно!</a
+        >
+      </div>
+    </div>
+    <section class="top-banner">
+      <div class="container">
+        <h1 class="heading">Погода в вашем городе</h1>
+        <form>
+          <input type="text" placeholder="Введите город" autofocus />
+          <button type="submit">ПОИСК</button>
+          <span class="msg"></span>
+        </form>
+      </div>
+    </section>
+    <section class="ajax-section">
+      <div class="container">
+        <ul class="cities"></ul>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="container">
+        <small>Special for Hillel students</small>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script src="script1.js" async></script>
+  </head>
+  <body class="container">
+    <button class="btn btn-primary" id="getPost" onclick="onGetPostClick();">
+      Get Posts
+    </button>
+    <div
+      id="postsContainer"
+      class="d-inline-flex justify-content-between flex-wrap"
+    >
+      <span id="error" class="error hidden"></span>
+    </div>
+
+    <script type="text/template" id="postItemTemplate">
+      <div class="card w-25 text-dark bg-light border-info mb-3" data-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">{{title}}</h3>
+          <p class="card-text">{{body}}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-info">Click me</button>
+        </div>
+      </div>
+    </script>
+  </body>
+</html>
