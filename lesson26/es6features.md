@@ -59,7 +59,7 @@ var bob = {
 More info: [MDN Arrow Functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ### Classes
-ES6 classes are a simple sugar over the prototype-based OO pattern.  Having a single convenient declarative form makes class patterns easier to use, and encourages interoperability.  Classes support prototype-based inheritance, super calls, instance and static methods and constructors.
+ES6 классы по большому счету это просто синтаксический сахар поверх прототипной реализации ООП в JavaScript. Имея похожий декларативный подход для описания классов позволяет проще работать с классами. Классы поддерживают прототипное насследование, вызов родителя, инстанс и статические методы и конструкоры.
 
 ```JavaScript
 class SkinnedMesh extends THREE.Mesh {
@@ -89,8 +89,8 @@ class SkinnedMesh extends THREE.Mesh {
 
 More info: [MDN Classes](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)
 
-### Enhanced Object Literals
-Object literals are extended to support setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making super calls, and computing property names with expressions.  Together, these also bring object literals and class declarations closer together, and let object-based design benefit from some of the same conveniences.
+### Enhanced Object Literals (Улучшенные обьектные литералы)
+Обьектные литералы были расширены для поддержки установки прототипа во время создания, упрощение для синтаксиса `foo: foo`, определение методов, вызов super, вычисляемые именя свойств. Все это улучшает совместимость обьектов с классами и позволяет проще использовать ООП паттерны.
 
 
 ```JavaScript
@@ -111,8 +111,9 @@ var obj = {
 
 More info: [MDN Grammar and types: Object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals)
 
-### Template Strings
-Template strings provide syntactic sugar for constructing strings.  This is similar to string interpolation features in Perl, Python and more.  Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+### Template Strings (Строки шаблоны)
+
+Строки шаблоны предоставляют синтаксический сахар для создания строк. Это похоже на интерполяцию строк в Питоне, Перл и др. Опционально можно добавить тег который позволяет кастомизировать процесс создания строки (например чтоб избежать атак через иньекцию).
 
 ```JavaScript
 // Basic literal string creation
