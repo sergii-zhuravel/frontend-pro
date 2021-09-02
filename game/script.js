@@ -69,16 +69,6 @@ function swapTiles(id) {
   }
 }
 
-function findTileById(id) {
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++) {
-      if (TILES[i][j].textContent == id) {
-        return TILES[i][j];
-      }
-    }
-  }
-}
-
 function findEmptyTileCoords() {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
