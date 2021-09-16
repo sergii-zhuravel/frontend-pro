@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="game-container">
+        <div id="counter">Counter: 0</div>
+        <div id="tiles" class="tiles-container">Press Start game</div>
+        <div class="control-panel">
+          <button onclick="initGame();">Start game</button>
+        </div>
+      </div>
+    </main>
+    <style>
+      :root {
+        --tile-size: 70px;
+      }
+      .main {
+        width: 100vh;
+        height: 100vh;
+        margin: 0 auto;
+      }
+      .game-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      .tiles-container {
+        margin: 0 auto;
+        width: calc(var(--tile-size) * 4 + 24px);
+        /* background-color: darkcyan; */
+        display: flex;
+        flex-wrap: wrap;
+        outline: 9px solid lightskyblue;
+        font-size: 23px;
+        font-weight: 700;
+        color: blueviolet;
+      }
+      .control-panel {
+        width: 100px;
+      }
+      .tile {
+        height: var(--tile-size);
+        width: var(--tile-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        /* box-shadow: inset 0px 0px 10px rgba(200,140,200,0.5); */
+        border-radius: 5px;
+      }
+    </style>
+  </body>
+</html>
