@@ -1,15 +1,16 @@
 ### Пошаговая инструкция создания npm проекта со сборкой webpack
 
 
-1. npm init -y
+1. `npm init -y`
 // don't need main field in the package.json, so it can be removed
-2. npm i -D webpack webpack-cli
+2. `npm i -D webpack webpack-cli`
 3. Create file webpack.config.js (webpack default config)
 
 4. Basic config content
 --------------------
 Version 1
 --------------------
+```
 const path = require('path');
 module.exports = {
     mode: 'development', //production, default is none
@@ -21,12 +22,14 @@ module.exports = {
         filename: 'app.bundle.js'
   },
 }
+```
 --------------------
 5. add script in package.json
 "build": "webpack"
 
 6. Improved config
 ---------------------
+```
 const path = require('path');
 module.exports = {
     mode: 'development', //production, default is none
@@ -38,12 +41,13 @@ module.exports = {
         filename: '[name].[contenthash].js'
   },
 }
+```
 ---------------------
 Add html-webpack-plugin to generate HTML file with included bundles
 
-npm i -D html-webpack-plugin
+`npm i -D html-webpack-plugin`
 ---------------------
-
+```
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -63,11 +67,12 @@ module.exports = {
     }),
   ],
 }
+```
 ---------------------
 How to work with styles
-import style from './app.css';
+`import style from './app.css';`
 ---------------------
-
+```
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -96,6 +101,7 @@ module.exports = {
     }),
   ],
 }
+```
 ---------------------
 How to configure devServer
 
@@ -103,10 +109,11 @@ Add new script into package.json:
 "dev": "webpack serve"
 
 Run:
-npm install -D webpack-dev-server
+`npm install -D webpack-dev-server`
 
 Improved config with dev server
 ---------------------
+```
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -158,7 +165,7 @@ module.exports = {
     }),
   ],
 };
-
+```
 
 To support babel install these dependencies:
-npm i -D @babel/core @babel/preset-env babel-loader
+`npm i -D @babel/core @babel/preset-env babel-loader`
